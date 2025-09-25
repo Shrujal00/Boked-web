@@ -4,6 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boked – Chrome Extension</title>
+
+  <!-- SEO Meta -->
+  <meta name="title" content="Boked – Chrome Extension" />
+  <meta name="description" content="Boked blocks AI websites and search engines like ChatGPT, Bard, Copilot, Google, Bing, Yahoo, DuckDuckGo, and more." />
+  <meta name="keywords" content="Boked, Chrome extension, AI blocker, search engine blocker, productivity, focus" />
+  <meta name="author" content="Shrujal00" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shrujal00.github.io/Boked/" />
+  <meta property="og:title" content="Boked – Chrome Extension" />
+  <meta property="og:description" content="Block AI sites and search engines with Boked for focus and productivity." />
+  <meta property="og:image" content="https://shrujal00.github.io/Boked/icons/icon512.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://shrujal00.github.io/Boked/" />
+  <meta property="twitter:title" content="Boked – Chrome Extension" />
+  <meta property="twitter:description" content="Boked blocks AI and search engine sites to keep you distraction-free." />
+  <meta property="twitter:image" content="https://shrujal00.github.io/Boked/icons/icon512.png" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#00ffff">
+
   <style>
     /* --- Global Reset & Theme --- */
     body {
@@ -32,6 +61,11 @@
       padding: 4rem 1rem 3rem;
       animation: fadeUp 1.2s ease;
     }
+    header img {
+      width: 100px;
+      margin-bottom: 1rem;
+      image-rendering: -webkit-optimize-contrast;
+    }
     header h1 {
       font-size: 3rem;
       margin: 0;
@@ -39,66 +73,60 @@
       animation: glowPulse 3s infinite;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       margin-top: 0.8rem;
       color: #aaa;
-      max-width: 600px;
+      max-width: 640px;
       margin-left: auto;
       margin-right: auto;
     }
 
     /* --- Main Sections --- */
     main {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.5rem 3rem;
     }
-    section {
+    .card {
       background: #111; /* near-black panels */
       border-left: 4px solid #0ff;
-      padding: 1.5rem 1.8rem;
+      padding: 1.6rem 1.8rem;
       border-radius: 8px;
       margin-bottom: 2rem;
       animation: fadeUp 1s ease;
       animation-fill-mode: both;
     }
-    section:nth-child(1) { animation-delay: 0.3s; }
-    section:nth-child(2) { animation-delay: 0.6s; }
-    section:nth-child(3) { animation-delay: 0.9s; }
-    section:nth-child(4) { animation-delay: 1.2s; }
+    .card:nth-of-type(1) { animation-delay: 0.3s; }
+    .card:nth-of-type(2) { animation-delay: 0.6s; }
+    .card:nth-of-type(3) { animation-delay: 0.9s; }
+    .card:nth-of-type(4) { animation-delay: 1.2s; }
 
     h2 {
       margin-top: 0;
       color: #ff5555; /* neon red accent */
     }
 
-    ul, ol {
-      margin-left: 1.5rem;
-    }
-    li {
-      margin: 0.4rem 0;
-    }
+    ul, ol { margin-left: 1.5rem; }
+    li { margin: 0.45rem 0; }
 
-    /* --- Button --- */
     .btn {
       display: inline-block;
       padding: 0.8rem 1.4rem;
       background: #0ff;
       color: #000;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       border-radius: 6px;
       margin-top: 1rem;
-      transition: all 0.3s ease;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
     }
     .btn:hover {
       background: #ff5555;
       color: #fff;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 0 10px #ff5555;
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 0 12px #ff5555;
     }
 
-    /* --- Footer --- */
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -107,26 +135,33 @@
       color: #666;
       border-top: 1px solid #222;
     }
+
+    /* responsive tweaks */
+    @media (max-width:600px) {
+      header h1 { font-size: 2.2rem; }
+      header img { width: 80px; }
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="icons/icon128.png" alt="Boked Logo">
     <h1>Boked</h1>
-    <p>The Chrome extension that blocks AI websites and search engines — for focus, discipline, and productivity.</p>
+    <p>The extension that blocks AI websites and search engines — for focus and productivity.</p>
   </header>
 
   <main>
-    <section>
+    <section class="card">
       <h2>✨ Features</h2>
       <ul>
-        <li>Block AI platforms like ChatGPT, Bard (Gemini), Copilot, Claude, Poe, Perplexity, and more.</li>
+        <li>Block AI platforms like ChatGPT, Bard, Copilot, Claude, Poe, Perplexity, and more.</li>
         <li>Block search engines including Google, Bing, Yahoo, DuckDuckGo, Baidu, Yandex, etc.</li>
         <li>Lightweight — no extra bloat, no performance hit.</li>
         <li>Privacy-first — zero data collection, everything stays local.</li>
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h2>📥 Installation</h2>
       <ol>
         <li>Download or clone this repository.</li>
@@ -134,19 +169,19 @@
         <li>Enable <strong>Developer mode</strong>.</li>
         <li>Click <strong>Load unpacked</strong> and select the <code>Boked</code> folder.</li>
       </ol>
-      <a href="https://github.com/Shrujal00/Bocked" class="btn">View on GitHub</a>
+      <a href="https://github.com/Shrujal00/Boked" class="btn">View on GitHub</a>
     </section>
 
-    <section>
+    <section class="card">
       <h2>🛑 Blocked Sites</h2>
-      <p>Boked blocks both AI sites and search engines, including but not limited to:</p>
+      <p>Boked blocks AI sites and search engines, including but not limited to:</p>
       <ul>
         <li><strong>AI:</strong> chat.openai.com, bard.google.com, copilot.microsoft.com, perplexity.ai, claude.ai, poe.com, you.com</li>
         <li><strong>Search:</strong> google.com, bing.com, yahoo.com, duckduckgo.com, baidu.com, yandex.com, ecosia.org, startpage.com, qwant.com</li>
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h2>📸 Screenshots</h2>
       <p>Add screenshots here to showcase Boked in action (recommended before publishing).</p>
     </section>
