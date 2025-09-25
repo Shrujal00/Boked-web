@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boked – Chrome Extension</title>
+  <style>
+    /* --- Global Reset & Theme --- */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000; /* true black */
+      color: #e5e5e5;
+      font-family: "Courier New", monospace;
+      line-height: 1.6;
+    }
+
+    /* --- Animations --- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 4px #0ff, 0 0 8px #0ff; }
+      50% { text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+      100% { text-shadow: 0 0 4px #0ff, 0 0 8px #0ff; }
+    }
+
+    /* --- Header --- */
+    header {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      animation: fadeUp 1.2s ease;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #0ff; /* neon cyan */
+      animation: glowPulse 3s infinite;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.8rem;
+      color: #aaa;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Main Sections --- */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      background: #111; /* near-black panels */
+      border-left: 4px solid #0ff;
+      padding: 1.5rem 1.8rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      animation: fadeUp 1s ease;
+      animation-fill-mode: both;
+    }
+    section:nth-child(1) { animation-delay: 0.3s; }
+    section:nth-child(2) { animation-delay: 0.6s; }
+    section:nth-child(3) { animation-delay: 0.9s; }
+    section:nth-child(4) { animation-delay: 1.2s; }
+
+    h2 {
+      margin-top: 0;
+      color: #ff5555; /* neon red accent */
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    li {
+      margin: 0.4rem 0;
+    }
+
+    /* --- Button --- */
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      background: #0ff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #ff5555;
+      color: #fff;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 10px #ff5555;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Boked</h1>
+    <p>The Chrome extension that blocks AI websites and search engines — for focus, discipline, and productivity.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>✨ Features</h2>
+      <ul>
+        <li>Block AI platforms like ChatGPT, Bard (Gemini), Copilot, Claude, Poe, Perplexity, and more.</li>
+        <li>Block search engines including Google, Bing, Yahoo, DuckDuckGo, Baidu, Yandex, etc.</li>
+        <li>Lightweight — no extra bloat, no performance hit.</li>
+        <li>Privacy-first — zero data collection, everything stays local.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📥 Installation</h2>
+      <ol>
+        <li>Download or clone this repository.</li>
+        <li>Open <code>chrome://extensions/</code> in Chrome.</li>
+        <li>Enable <strong>Developer mode</strong>.</li>
+        <li>Click <strong>Load unpacked</strong> and select the <code>Boked</code> folder.</li>
+      </ol>
+      <a href="https://github.com/Shrujal00/Bocked" class="btn">View on GitHub</a>
+    </section>
+
+    <section>
+      <h2>🛑 Blocked Sites</h2>
+      <p>Boked blocks both AI sites and search engines, including but not limited to:</p>
+      <ul>
+        <li><strong>AI:</strong> chat.openai.com, bard.google.com, copilot.microsoft.com, perplexity.ai, claude.ai, poe.com, you.com</li>
+        <li><strong>Search:</strong> google.com, bing.com, yahoo.com, duckduckgo.com, baidu.com, yandex.com, ecosia.org, startpage.com, qwant.com</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📸 Screenshots</h2>
+      <p>Add screenshots here to showcase Boked in action (recommended before publishing).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Boked | Open Source on GitHub</p>
+  </footer>
+</body>
+</html>
